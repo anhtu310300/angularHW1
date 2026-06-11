@@ -1,0 +1,118 @@
+<h2>Task 4</h2>
+
+<label>First name</label>
+<br>
+<input type="text" [(ngModel)]="firstName">
+
+<br><br>
+
+<label>Last name</label>
+<br>
+<input type="text" [(ngModel)]="lastName">
+
+<br><br>
+
+<label>Full Name</label>
+<br>
+<input type="text" [(ngModel)]="fullName" readonly>
+
+<br><br>
+
+<label>State</label>
+<br>
+<select [(ngModel)]="state">
+  <option value="">Select State</option>
+  <option value="hcm">HCM</option>
+  <option value="hn">Ha Noi</option>
+  <option value="other">Other</option>
+</select>
+
+<br><br>
+
+<div *ngIf="state === 'other'">
+  <label>City</label>
+  <br>
+  <input type="text" [(ngModel)]="city">
+</div>
+
+<br>
+
+<p>What Are You ..?</p>
+
+<input
+  type="radio"
+  name="role"
+  value="teacher"
+  [(ngModel)]="selectedRole"
+>
+Teacher
+
+<input
+  type="radio"
+  name="role"
+  value="sport"
+  [(ngModel)]="selectedRole"
+>
+Sport
+
+<input
+  type="radio"
+  name="role"
+  value="musician"
+  [(ngModel)]="selectedRole"
+>
+Musician Person
+
+<br><br>
+
+<div *ngIf="selectedRole === 'teacher'">
+  <label>Subjects You Can Teach</label>
+  <br>
+  <textarea></textarea>
+
+  <br><br>
+
+  <label>Highest Education</label>
+  <br>
+  <input type="text">
+
+  <br><br>
+
+  <label>Age</label>
+  <br>
+  <input type="text">
+</div>
+
+<div *ngIf="selectedRole === 'sport'">
+  <label>Sports You Are Good At</label>
+  <br>
+  <textarea></textarea>
+
+  <br><br>
+
+  <label>Height</label>
+  <br>
+  <input type="text">
+
+  <br><br>
+
+  <label>Weight</label>
+  <br>
+  <input type="text">
+</div>
+
+<div *ngIf="selectedRole === 'musician'">
+  <label>Instrument You Play</label>
+  <br>
+  <textarea></textarea>
+
+  <br><br>
+
+  <label>Any Major Achievement</label>
+  <br>
+  <textarea></textarea>
+</div>
+
+<br>
+
+<button (click)="submitForm()">Submit form</button>

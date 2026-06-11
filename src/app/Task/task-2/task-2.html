@@ -1,0 +1,28 @@
+<h2>Task 2</h2>
+
+<div class="category-box" (click)="selectCategory('mobile')">
+  Mobile
+</div>
+
+<div class="category-box" (click)="selectCategory('laptop')">
+  Laptop
+</div>
+
+<div class="category-box" (click)="selectCategory('camera')">
+  Camera
+</div>
+
+<div *ngIf="selectedCategory === 'mobile'">
+  <h3>Mobile Companies</h3>
+  <p>Apple, Samsung, Oppo, Xiaomi</p>
+</div>
+
+<div *ngIf="selectedCategory === 'laptop'">
+  <h3>Laptop Companies</h3>
+  <p>Dell, HP, Lenovo, Asus</p>
+</div>
+
+<div *ngIf="selectedCategory === 'camera'">
+  <h3>Camera Companies</h3>
+  <p>Canon, Nikon, Sony, Fujifilm</p>
+</div>

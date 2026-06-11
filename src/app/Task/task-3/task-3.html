@@ -1,0 +1,32 @@
+<h2>Task 3</h2>
+
+<ul>
+  <li>Show hide div1 on click of show & hide button</li>
+  <li>Show hide div2 on click of toggle button</li>
+  <li>If we enter same value in both textbox hide div3 else show</li>
+</ul>
+
+<div class="box green" *ngIf="showDiv1">
+  Div 1
+</div>
+
+<div class="box green" *ngIf="showDiv2">
+  Div 2
+</div>
+
+<div class="box blue" *ngIf="showDiv3">
+  Div 3
+</div>
+
+<br>
+
+<button (click)="showDiv1Box()">Show</button>
+<button (click)="hideDiv1Box()">Hide</button>
+
+<button (click)="toggleDiv2()">Show / Hide</button>
+
+<br><br>
+
+<input type="text" placeholder="Num 1" [(ngModel)]="num1">
+<input type="text" placeholder="Num 2" [(ngModel)]="num2">
+<button (click)="checkDiv3()">Attempt Div3</button>

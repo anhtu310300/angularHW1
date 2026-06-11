@@ -1,0 +1,22 @@
+<h2>Task 1</h2>
+
+<input
+  type="radio"
+  name="gender"
+  value="male"
+  [(ngModel)]="selectedGender"
+>
+Male
+
+<br>
+
+<input
+  type="radio"
+  name="gender"
+  value="female"
+  [(ngModel)]="selectedGender"
+>
+Female
+
+<p *ngIf="selectedGender === 'male'">You selected Male</p>
+<p *ngIf="selectedGender === 'female'">You selected Female</p>
